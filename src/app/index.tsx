@@ -1,9 +1,31 @@
-import { Text, View, StyleSheet } from "react-native";
+import { router } from 'expo-router';
+import { Button, Image, StyleSheet, Text, View } from 'react-native';
 
-export default function Index() {
+export default function HomeScreen() {
   return (
     <View style={styles.container}>
-      <Text>Edit src/app/index.tsx to edit this screen.</Text>
+      <Text style={styles.headerText}>FORTUNE TELLER</Text>
+
+      <Image
+        source={{
+          uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOUPTWkOWi-vTnxPVCyX19Va-HRR9AFG9C0xp20kx1fW17COAJT-J_ngs&s=10',
+        }}
+        style={styles.image}
+      />
+
+      {/* Practical information section */}
+      <View style={styles.infoBox}>
+        <Text style={styles.infoText}>
+          Coding can be tough, but the universe has a plan for your code. Are you about to face a massive bug, or will your code compile on the first try?
+        </Text>
+      </View>
+
+      {/* Navigation Button */}
+      <Button
+        title="Reveal My Coding Destiny"
+        color="#0cec5a9b"
+        onPress={() => router.push('/reveal')}
+      />
     </View>
   );
 }

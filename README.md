@@ -1,8 +1,24 @@
-# Welcome to your Expo app 👋
+# Fortune Teller App 🔮
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A React Native mobile application built with Expo and Expo Router as part of Mobile Application Development Practical Guide 02.
 
-## Get started
+## Overview
+
+The Fortune Teller app is a 2-screen mobile application:
+1. **Welcome Screen (`HomeScreen` in `src/app/index.tsx`)**:
+   - Displays the app title "FORTUNE TELLER"
+   - Displays an illustrative crystal ball fortune teller image
+   - Contains an info box with humorous coding destiny intro text
+   - Features a navigation button "Reveal My Coding Destiny" that navigates to `/reveal` using `router.push('/reveal')`
+
+2. **Reveal Screen (`RevealScreen` in `src/app/reveal.tsx`)**:
+   - Displays header "Here is your Fortune!"
+   - Shows an illustrative mystical fortune palm image
+   - Displays the fortune card: *"You will solve a bug today by randomly deleting a single line of code that you didn't even write."*
+   - Includes a "Go Back" button that navigates back to the welcome screen using `router.back()`
+
+3. **Navigation Layout (`RootLayout` in `src/app/_layout.tsx`)**:
+   - Uses Expo Router's Stack navigator to provide header bar navigation with titles "Welcome to the Fortune Teller" and "Your Fortune".
 
 1. Install dependencies
 
